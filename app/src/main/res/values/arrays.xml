@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="goal_options">
+        <item>Extreme Weight Loss (2 pounds per week)</item>
+        <item>Weight Loss (1 pound per week)</item>
+        <item>Maintain Weight</item>
+        <item>Weight Gain (1 pound per week)</item>
+        <item>Extreme Weight Gain (2 pounds per week)</item>
+    </string-array>
+    <string name="select_goal_prompt">Select your goal</string>
+</resources>
