@@ -1,13 +1,15 @@
 package com.example.betterfit
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
-import android.widget.TextView
-import android.widget.*
+import android.widget.Spinner
 import android.content.Intent
+import androidx.activity.ComponentActivity
+import android.widget.TextView
+import android.widget.ArrayAdapter
+
 
 class MainActivity : ComponentActivity() {
     private lateinit var ageEditText: EditText
@@ -72,6 +74,12 @@ class MainActivity : ComponentActivity() {
 
         val intent = Intent(this, CounterActivity::class.java)
         intent.putExtra("caloricGoal", caloricGoal)
+        intent.putExtra("age", age)
+        intent.putExtra("sex", sex)
+        intent.putExtra("heightFeet", heightFeet)
+        intent.putExtra("heightInches", heightInches)
+        intent.putExtra("weight", weight)
+        intent.putExtra("selectedGoal", selectedGoal)
         startActivity(intent)
     }
 }

@@ -1,11 +1,12 @@
+// CounterActivity.kt
 package com.example.betterfit
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import android.content.Intent
 
 class CounterActivity : AppCompatActivity() {
     private lateinit var breakfastCaloriesEditText: EditText
@@ -27,6 +28,12 @@ class CounterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_counter)
 
         caloricGoal = intent.getIntExtra("caloricGoal", 0)
+        val age = intent.getIntExtra("age", 0)
+        val sex = intent.getStringExtra("sex") ?: "Unknown"
+        val heightFeet = intent.getDoubleExtra("heightFeet", 0.0)
+        val heightInches = intent.getDoubleExtra("heightInches", 0.0)
+        val weight = intent.getDoubleExtra("weight", 0.0)
+        val selectedGoal = intent.getStringExtra("selectedGoal") ?: "Maintain"
 
         // Initialize UI components
         breakfastCaloriesEditText = findViewById(R.id.BreakfastCaloriesEditText)
@@ -68,8 +75,18 @@ class CounterActivity : AppCompatActivity() {
         }
 
         discoverMealsButton.setOnClickListener {
-            // Navigate to the Discover Meals screen
-            startActivity(Intent(this, DiscoverMealsActivity::class.java))
+            // Pass relevant information to DiscoverMealsActivity
+            val intent = Intent(this, DiscoverMealsActivity::class.java)
+            intent.putExtra("consumedCalories", consumedCalories)
+            intent.putExtra("burnedCalories", burnedCalories)
+            intent.putExtra("caloricGoal", caloricGoal)
+            intent.putExtra("age", age)
+            intent.putExtra("sex", sex)
+            intent.putExtra("heightFeet", heightFeet)
+            intent.putExtra("heightInches", heightInches)
+            intent.putExtra("weight", weight)
+            intent.putExtra("selectedGoal", selectedGoal)
+            startActivity(intent)
         }
 
         discoverWorkoutsButton.setOnClickListener {
@@ -106,6 +123,7 @@ class CounterActivity : AppCompatActivity() {
 
         remainingCaloriesTextView.text = remainingCalories.toString()
     }
+
     override fun onSaveInstanceState(outState: Bundle) {
         // Save data to outState before the activity is destroyed
         outState.putInt("caloricGoal", caloricGoal)

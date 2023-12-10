@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="96dp"
-        android:text="BetterFit: Calorie Counter"
+        android:text="Calorie Counter"
         android:textColor="#406581"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
