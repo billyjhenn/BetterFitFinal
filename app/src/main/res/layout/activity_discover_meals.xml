@@ -10,10 +10,12 @@
         android:id="@+id/recommendedMealTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recommended Meal: "
-        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:layout_centerHorizontal="true"/>
+        android:text="Recommended Meal: "
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/mealDescriptionTextView"
