@@ -18,10 +18,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textSize="18sp"
-        android:textStyle="bold"
         android:padding="16dp"
-        android:text="Recommended Workout: 30 minutes of Cardio" />
+        android:text="Recommended Workout: 30 minutes of Cardio"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
 
 
 
