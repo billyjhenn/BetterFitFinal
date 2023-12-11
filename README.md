@@ -17,7 +17,7 @@ To use the BetterFit App, follow these steps:
 
 Installation:
 
-Download the app from the [Google Play Store] (Provide link if available).
+Download the app from the source code and run it on android studio.
 User Profile:
 
 Create a user profile by entering basic information such as age, gender, height, and weight.
