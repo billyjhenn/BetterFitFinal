@@ -30,10 +30,12 @@
                 android:id="@+id/searchButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#EF9A32"
                 android:text="Search"
-                app:layout_constraintTop_toBottomOf="@+id/foodSearchEditText"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/foodSearchEditText" />
 
             <TextView
                 android:id="@+id/resultTextView"
